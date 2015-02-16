@@ -20,8 +20,9 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<header id="masthead" role="banner">
-		<div class="container">
-			<nav class="navbar navbar-default" role="navigation">
+		
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sfm-nav-collapse" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Toggle navigation</span>
@@ -34,8 +35,9 @@
 				<div id="sfm-nav-collapse" class="collapse navbar-collapse">
 					<?php sfm_navbar(); ?>
 				</div>
-			</nav><!-- #site-navigation -->
-		</div>
+			</div>
+		</nav><!-- #site-navigation -->
+		
 	</header><!-- #masthead -->
 
 	<div id="content">
