@@ -55,6 +55,13 @@ add_action( 'init', 'sfm_genre_taxonomy', 0 ); // Hook into the 'init' action
 * Custom Post Types
 * ==================================================================================== */
 
+// Flush rewrite rules for custom post types
+add_action( 'after_switch_theme', 'sfm_flush_rewrite_rules' );
+// Flush your rewrite rules
+function sfm_flush_rewrite_rules() {
+flush_rewrite_rules();
+}
+
 /* Example of a custom Video post type which supports the custom taxonomy genre.
 function sfm_video_post_type() {
 
