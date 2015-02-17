@@ -17,19 +17,19 @@ function sfm_starter_paging_nav() {
 		return;
 	}
 	?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'sfm-starter' ); ?></h1>
-		<div class="nav-links">
+	<nav role="navigation">
+		<h3 class="sr-only"><?php _e( 'Posts navigation', 'sfm-starter' ); ?></h3>
+		<ul class="pager">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'sfm-starter' ) ); ?></div>
+			<li class="previous"><?php next_posts_link( __( '<span aria-hidden="true">&larr;</span> Older posts', 'sfm-starter' ) ); ?></li>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'sfm-starter' ) ); ?></div>
+			<li class="next"><?php previous_posts_link( __( 'Newer posts <span aria-hidden="true">&rarr;</span>', 'sfm-starter' ) ); ?></li>
 			<?php endif; ?>
 
-		</div><!-- .nav-links -->
+		</ul><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
 }
@@ -49,7 +49,7 @@ function sfm_starter_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'sfm-starter' ); ?></h1>
+		<h1 class="sr-only"><?php _e( 'Post navigation', 'sfm-starter' ); ?></h1>
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'sfm-starter' ) );
